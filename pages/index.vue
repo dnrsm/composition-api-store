@@ -9,7 +9,6 @@
 
 <script lang="ts">
 import { defineComponent, provide } from "@vue/composition-api";
-import useCounter, { CounterKey } from "@/composables/useCounter.ts";
 import CountBtn from "@/components/CountBtn.vue";
 import CountDisplay from "@/components/CountDisplay.vue";
 
@@ -18,11 +17,6 @@ export default defineComponent({
   components: {
     CountBtn,
     CountDisplay
-  },
-  setup() {
-    provide(CounterKey, useCounter());
-
-    return {}
   }
 });
 </script>

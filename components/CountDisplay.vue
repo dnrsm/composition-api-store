@@ -6,12 +6,12 @@
 
 <script lang="ts">
 import { defineComponent, reactive, inject } from "@vue/composition-api";
-import { CounterStore, CounterKey } from "@/composables/useCounter.ts";
+import useCounter from "@/composables/useCounter.ts";
 
 export default defineComponent({
   name: "CountDisplay",
   setup() {
-    const { count } = inject(CounterKey) as CounterStore;
+    const { count } = useCounter()
 
     return {
       count
